@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class IndexController {
 
-    @PostMapping("/welocome")
+    @PostMapping("/welcome")
     @ResponseBody
     public String welcome(@RequestParam(required = false, name = "param") String[] paramArray) {
         String msg = "";
@@ -17,7 +17,6 @@ public class IndexController {
             msg = "El array esta vacio";
         } else {
             for (String paramArrayItem : paramArray) {
-
                 msg += "param[" + i + "]" + paramArrayItem + "\n";
             }
         }
